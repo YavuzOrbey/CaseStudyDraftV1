@@ -1,0 +1,26 @@
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="food">
+        <class>jpa.entitymodels.Ingredient</class>    <!-- Set package name and class name under <class> tag -->
+        <class>jpa.entitymodels.Meal</class>
+        <class>jpa.entitymodels.MealType</class>
+        <class>jpa.entitymodels.Measurement</class>
+        <class>jpa.entitymodels.Nutrient</class>
+        <class>jpa.entitymodels.Pantry</class>
+        <class>jpa.entitymodels.Recipe</class>
+        <class>jpa.entitymodels.RecipeIngredientEntity</class>
+        <class>jpa.entitymodels.Role</class>
+        <class>jpa.entitymodels.Step</class>
+        <class>jpa.entitymodels.User</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3307/casestudy"/>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <property name="eclipselink.target-database" value="MySQL" />
+        </properties>
+
+    </persistence-unit>
+</persistence>
